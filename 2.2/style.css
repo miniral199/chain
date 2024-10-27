@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-left: 10px; /* Отступ слева */
+    padding-right: 10px; /* Отступ справа */
+}
+
+.col {
+    padding-left: 10px; /* Отступ слева */
+    padding-right: 10px; /* Отступ справа */
+    display: flex;
+    flex-direction: column; /* Устанавливаем колонку */
+}
+
+h1, h3 {
+    margin: 10px;
+}
+
+.slider-container {
+    flex-direction: column;
+    align-items: stretch; /* Чтобы ползунок занимал всю ширину */
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%; /* Ползунок на всю ширину */
+}
+
+.slider {
+    
+    width: 100%; /* Ползунок на всю ширину */
+    background: #C5C5C5; /* Цвет полоски */
+    appearance: none; /* Убираем стандартный стиль ползунка */
+    height: 50px; /* Увеличиваем высоту полоски до 26px */
+    border-radius: 33px; /* Скругляем углы полоски */
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Убираем стандартный стиль точки */
+    width: 50px; /* Ширина точки */
+    height: 50px; /* Высота точки */
+    background: white; /* Белый цвет точки */
+    cursor: pointer;
+    border-radius: 50%; /* Круглая форма */
+    border: 2px solid #C5C5C5; /* Серый контур, соответствующий полоске */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Лёгкая тень для видимости */
+    margin-top: 0px; /* Центрируем метку по высоте полоски */
+}
+
+.slider::-moz-range-thumb {
+    width: 50px; /* Ширина точки */
+    height: 50px; /* Высота точки */
+    background: white; /* Белый цвет точки */
+    cursor: pointer;
+    border-radius: 50%; /* Круглая форма */
+    border: 2px solid #C5C5C5; /* Серый контур, соответствующий полоске */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Лёгкая тень для видимости */
+    margin-top: 0px; /* Центрируем метку по высоте полоски */
+}
+
+.current-label {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30px; /* Поднимаем метку над ползунком */
+    font-weight: bold; /* Жирный шрифт */
+    color: black; /* Черный цвет */
+}
+
+.max-label {
+    position: absolute;
+    right: 0;
+    top: -30px; /* Поднимаем метку над ползунком */
+    font-weight: bold; /* Жирный шрифт */
+    color: black; /* Черный цвет */
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.experience-button, .employment-button {
+    border-radius: 20px;
+    margin: 0 5px; /* Отступ между кнопками */
+    padding: 10px;
+    border: 3px solid black; /* Сделаем рамки чуть толще */
+    background: white;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.experience-button.active, .employment-button.active {
+    background-color: black; /* Черный фон при активации */
+    color: white; /* Белый текст при активации */
+}
+
+.experience-button:hover:not(.active), .employment-button:hover:not(.active) {
+    background-color: #eee; /* Цвет фона при наведении */
+}
+
+.experience-button h3, .employment-button h3 {
+    margin: 0; /* Убираем отступы у заголовков внутри кнопок */
+}
+
+.employment-buttons {
+    display: flex;
+    flex-direction: column; /* Устанавливаем вертикальное направление для кнопок */
+    align-items: flex-start; /* Выравниваем кнопки по левому краю */
+}
+
+.employment-button {
+    margin-bottom: 10px; /* Отступ между кнопками "постоянная работа" и "проектная работа" */
+}
+
+#back {
+    color: black;
+    text-decoration: none;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.footer-button {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-button:hover {
+    background-color: darkgray;
+}
+
+h4 {
+    color: #585858;
+}

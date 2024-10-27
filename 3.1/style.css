@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+#block {
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center; /* Центрируем заголовок */
+    margin-bottom: 15px;
+}
+
+.search-filter {
+    display: flex;
+    margin-bottom: 10px; /* Уменьшено для компактности */
+}
+
+.search-filter input[type="search"] {
+    background-color: #D3D3D3;
+    color: black;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px 0 0 10px;
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.search-filter button {
+    background-color: #D3D3D3;
+    border: 1px solid #ccc;
+    border-radius: 0 10px 10px 0;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-filter button img {
+    width: 20px;
+    height: 20px;
+}
+
+#selected-filters-container {
+    display: flex;
+    flex-wrap: wrap; /* Обеспечивает перенос фильтров при необходимости */
+    margin-bottom: 20px; /* Отступ под фильтрами */
+}
+
+.filter-badge {
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    padding: 2px 5px;
+    margin-right: 10px;
+    margin-bottom: 10px; /* Отступ между фильтрами */
+    display: flex; /* Flex для расположения крестика */
+    align-items: center; /* Центрируем текст и крестик */
+}
+
+.close-button {
+    margin-left: 5px; /* Отступ между текстом и крестиком */
+    cursor: pointer; /* Курсор как указатель */
+}
+
+.full {
+    width: 100%;
+    height: 300px;
+    background-color: #575757; /* Цвет фона для полного блока */
+    margin-bottom: 20px; /* Отступ снизу для разделения блоков */
+    background-image: url('Group\ 70.png'); /* Замените на ваш URL изображения */
+    background-size: cover; /* Изображение будет покрывать блок */
+    background-position: center; /* Центрируем изображение */
+}
+
+#ful2 {
+    background-image: url('Group\ 75.png'); /* Замените на ваш URL изображения */
+    background-size: cover; /* Изображение будет покрывать блок */
+    background-position: center; /* Центрируем изображение */
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    height: 60px; /* Высота футера */
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChainApp</title>
+    <link rel="stylesheet" href="/footer/footer.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1><a href="../2.1/2.1.html" id="back"><</a></h1>
+            <h1>фильтр</h1>
+        </div>
+
+        <div class="row">
+            <h4>заработная плата</h4>
+        </div>
+        <br>
+        <div class="row slider-container" >
+            <div class="slider-wrapper">
+                <span class="current-label">15001</span>
+                <input type="range" min="1" max="497678" step="1" value="15001" class="slider">
+                <span class="max-label">497678</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <h4>требуемый опыт работы</h4>
+        </div>
+
+        <div class="row button-group">
+            <button class="experience-button"><h3>без опыта</h3></button>
+            <button class="experience-button"><h3>от 1 до 3 лет</h3></button>
+            <button class="experience-button"><h3>от 3 до 6 лет</h3></button>
+        </div>
+
+        <div class="col">
+            <h4>тип занятости</h4>
+            <div class="employment-buttons">
+                <button class="employment-button"><h3>постоянная работа</h3></button>
+                <button class="employment-button"><h3>проектная работа</h3></button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <img class="icon" src="/footer/Notifications None.png" alt="">
+        <img class="icon" src="/footer/Chat.png" alt="">
+        <img class="icon" src="/footer/Profile.png" alt="" onclick="window.location.href='../4.1/4.1.html'"></img>
+    </footer>
+    <script>
+        const slider = document.querySelector('.slider');
+        const currentLabel = document.querySelector('.current-label');
+
+        slider.addEventListener('input', function() {
+            currentLabel.textContent = this.value;
+        });
+
+        const experienceButtons = document.querySelectorAll('.experience-button');
+        const employmentButtons = document.querySelectorAll('.employment-button');
+
+        experienceButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+
+        employmentButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

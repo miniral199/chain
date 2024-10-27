@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChainApp</title>
+    <link rel="stylesheet" href="/footer/footer.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>
+            <span id="Tjob">Работа</span> <!-- Слово "работа" в span -->
+        </h1>
+        
+        <div class="container">
+            <form action="/search" method="GET">
+                <input type="search" id="search" name="q" placeholder="поиск">
+                <button type="button" id="f-submit" onclick="window.location.href='../2.2/2.2.html'">
+                    <img src="setting.png" alt="">
+                </button>
+            </form>
+
+            <div class="card" onclick="window.location.href='../2.1.1/2.1.1.html'">
+                <h2 class="title">Дизайнер<br>интерфейсов</h2>
+                <img src="sber.png" alt="Логотип" class="image">
+                <p class="salary">89 000</p>
+                <button class="button add">+</button>
+            </div>
+
+            <div class="card">
+                <h2 class="title">Менеджер<br>по работе с клиентами</h2>
+                <img src="sber.png" alt="Логотип" class="image">
+                <p class="salary">109 000₽</p>
+                <button class="button add">+</button>
+            </div>
+
+            <div class="card">
+                <h2 class="title">Дизайнер<br>интерфейсов</h2>
+                <img src="sber.png" alt="Логотип" class="image">
+                <p class="salary">89 000</p>
+                <button class="button add">+</button>
+            </div>
+        </div>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <img class="icon" src="/footer/Notifications None.png" alt="">
+            <img class="icon" src="/footer/Chat.png" alt="">
+            <img class="icon" src="/footer/Profile.png" alt="" onclick="window.location.href='../4.1/4.1.html'"></img>
+        </footer>
+    </div>
+</body>
+</html>

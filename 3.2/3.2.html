@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChainApp</title>
+    <link rel="stylesheet" href="/footer/footer.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="row">
+        <h1><a href="../3.1/3.1.html" id="back"><</a></h1>
+        <h1>фильтр</h1>
+    </div>
+    <h3>тематика</h3>
+    <div class="button-container">
+        <div class="row-buttons">
+            <button class="filter-btn">дизайн</button>
+            <button class="filter-btn">управление</button>
+        </div>
+        <button class="filter-btn">программирование</button>
+    </div>
+
+    <!-- Контейнер для кнопки "Сохранить" -->
+    <div class="save-button-container" id="save-container">
+        <button id="save-filters" class="save-btn">Сохранить</button>
+    </div>
+
+    <footer class="footer">
+        <img class="icon" src="/footer/Notifications None.png" alt="">
+        <img class="icon" src="/footer/Chat.png" alt="">
+        <img class="icon" src="/footer/Profile.png" alt="" onclick="window.location.href='../4.1/4.1.html'"></img>
+    </footer>
+
+    <script>
+        let selectedFilters = JSON.parse(localStorage.getItem('selectedFilters')) || [];
+
+        document.querySelectorAll('.filter-btn').forEach(function(button) {
+            button.addEventListener('click', function() {
+                const filter = button.innerText;
+
+                // Добавляем или удаляем фильтр
+                if (selectedFilters.includes(filter)) {
+                    selectedFilters = selectedFilters.filter(f => f !== filter);
+                } else {
+                    selectedFilters.push(filter);
+                }
+
+                button.classList.toggle('selected'); // Визуальная индикация
+
+                // Показать или скрыть кнопку "Сохранить"
+                document.getElementById('save-container').style.display = selectedFilters.length > 0 ? 'flex' : 'none';
+            });
+
+            if (selectedFilters.includes(button.innerText)) {
+                button.classList.add('selected');
+            }
+        });
+
+        // Сохранение фильтров
+        document.getElementById('save-filters').addEventListener('click', function () {
+            localStorage.setItem('selectedFilters', JSON.stringify(selectedFilters));
+            alert('Фильтры сохранены!');
+
+            // Скрыть кнопку после сохранения
+            document.getElementById('save-container').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

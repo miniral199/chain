@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/footer/footer.css">
+    <link rel="stylesheet" href="style.css">
+    <title>ChainApp</title>
+</head>
+<body>
+    <div id="block">
+        <h1>Статьи <span id="selected-filters"></span></h1>
+        <div class="search-filter">
+            <input type="search" id="search" name="q" placeholder="поиск">
+            <button type="button" id="f-submit" onclick="window.location.href='../3.2/3.2.html'">
+                <img src="setting.png" alt="">
+            </button>
+        </div>
+
+        <div id="selected-filters-container"></div> <!-- Контейнер для выбранных фильтров -->
+
+        <div id="ful1" class="full" onclick="window.location.href='../3.3/3.3.html'"></div>
+        <div id="ful2" class="full"></div>
+    </div>
+    <footer class="footer">
+        <img class="icon" src="/footer/Notifications None.png" alt="">
+        <img class="icon" src="/footer/Chat.png" alt="">
+        <img class="icon" src="/footer/Profile.png" alt="" onclick="window.location.href='../4.1/4.1.html'"></img>
+    </footer>
+
+    <script>
+        // Загрузка выбранных фильтров из localStorage
+        function loadSelectedFilters() {
+            const selectedFilters = JSON.parse(localStorage.getItem('selectedFilters')) || [];
+            const filterContainer = document.getElementById('selected-filters-container');
+            filterContainer.innerHTML = '';
+
+            selectedFilters.forEach(function(filter) {
+                const filterElement = document.createElement('div');
+                filterElement.classList.add('filter-badge');
+                filterElement.innerText = filter;
+
+                // Добавление крестика для удаления фильтра
+                const closeButton = document.createElement('span');
+                closeButton.innerText = 'X';
+                closeButton.classList.add('close-button');
+                closeButton.onclick = function() {
+                    removeFilter(filter);
+                };
+
+                filterElement.appendChild(closeButton);
+                filterContainer.appendChild(filterElement);
+            });
+
+            // Проверка выбранных фильтров и изменение блоков
+            updateBlocksVisibility(selectedFilters.length > 0);
+        }
+
+        // Удаление фильтра
+        function removeFilter(filter) {
+            let selectedFilters = JSON.parse(localStorage.getItem('selectedFilters')) || [];
+            selectedFilters = selectedFilters.filter(f => f !== filter);
+            localStorage.setItem('selectedFilters', JSON.stringify(selectedFilters));
+            loadSelectedFilters();
+        }
+
+        // Обновление видимости блоков
+        function updateBlocksVisibility(isAnySelected) {
+            const ful1 = document.getElementById('ful1');
+            const ful2 = document.getElementById('ful2');
+
+            if (isAnySelected) {
+                ful1.style.display = 'none'; // Скрыть первый блок
+                ful2.style.backgroundImage = "url('change.png')"; // Изменить изображение второго блока
+                ful2.style.display = 'block'; // Показать второй блок
+            } else {
+                ful1.style.display = 'block'; // Показать первый блок
+                ful2.style.backgroundImage = "url('Group\\ 75.png')"; // Вернуть изображение второго блока
+                ful2.style.display = 'block'; // Показать второй блок
+            }
+        }
+
+        window.onload = loadSelectedFilters;
+    </script>
+</body>
+</html>

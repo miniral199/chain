@@ -1,0 +1,210 @@
+
+body {
+    font-family: 'Helvetica Neue', 'sans-serif';
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+.avatar-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.img {
+    width: 70px;
+    height: 70px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.text-content {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.big-button {
+    width: 100%;
+    padding: 25px;
+    background: radial-gradient(circle, rgba(39, 158, 255, 0.67) 0%, rgba(210, 210, 210, 0) 100%);
+    color: white;
+    border: none;
+    border-radius: 50px; /* Овальная форма */
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.6); /* Светящийся эффект */
+}
+
+.small-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.small-buttons button {
+    width: 48%;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px; /* Овальная форма */
+    cursor: pointer;
+}
+
+.articles-button {
+    position: relative;
+    background: radial-gradient(ellipse at center, rgba(161, 255, 72, 1) 0%, rgba(115, 115, 115, 0) 100%);
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 25px; /* Овальная форма */
+}
+
+.articles-button::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: radial-gradient(ellipse at center, rgba(39, 158, 255, 0.67) 0%, rgba(115, 115, 115, 0) 100%);
+    border-radius: 25px;
+    z-index: -1;
+}
+
+.articles-button .fa-search {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: white;
+}
+
+.section-title {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    text-align: left;
+}
+
+/* Стили для карточек вакансий */
+.card {
+    box-sizing: border-box;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    background: rgb(239, 238, 244);
+    width: 100%; /* Карточка занимает всю ширину контейнера */
+    padding: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card .title, .card .salary {
+    font-weight: bold;
+    margin: 0;
+}
+
+.card .salary {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.card .image {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 50px;
+}
+
+.card .button.add {
+    background-color: rgba(240, 240, 240, 1);
+    color: gray;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 24px;
+    width: 50px;
+    height: 50px; /* Увеличиваем высоту кнопки */
+    display: flex; /* Flexbox для центрирования */
+    align-items: center; /* Вертикальное выравнивание */
+    justify-content: center; /* Горизонтальное выравнивание */
+    position: absolute; /* Чтобы позиционировать её */
+    bottom: 16px; /* Отступ от нижнего края карточки */
+    right: 16px; /* Отступ от правого края карточки */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.card .button.add:hover {
+    background-color: rgba(230, 230, 230, 1);
+}
+
+/* Стили для футера */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.footer-button {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-button:hover {
+    background-color: darkgray;
+}
+
+
+#back1{
+    background-image: url("Group\ 6.png");
+    background-size: cover;
+    height: 140px;
+    background-repeat: no-repeat
+}
+#back2{
+    background-image: url("podpiska.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}

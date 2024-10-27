@@ -1,0 +1,30 @@
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: white;
+    text-align: left;
+    margin-left: 20px; /* Align content away from the center */
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.footer-button {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-button:hover {
+    background-color: darkgray;
+}

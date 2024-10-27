@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    
+    font-family: Helvetica Neue;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  h1 a#back {
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  h1.title, p {
+    margin-left: 20px;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+  
+  .details {
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  .details .col {
+    margin: 0 20px;
+  }
+  
+  .highlighted-text {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  
+  .bold {
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 20px;
+  }
+  
+  button.apply-btn {
+    position: fixed; /* Зафиксированное положение */
+    width: 90%;
+    bottom: 80px; /* Отступ от нижнего края (выше футера) */
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button.apply-btn.clicked {
+    background-color: grey;
+    color: black;
+}
+
+
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.footer-button {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-button:hover {
+    background-color: darkgray;
+}
+
+  

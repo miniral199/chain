@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChainApp</title>
+    <link rel="stylesheet" href="/footer/footer.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="row">
+      <h1><a href="../2.1/2.1.html" id="back"><</a></h1>
+
+      <div class="col">
+        <h1 class="title">Дизайнер<br />интерфейсов</h1>
+        <p>
+          Сбербанк — наиболее крупный финансовый институт, имеющий огромную сеть подразделений, устройств самообслуживания на территории России, СНГ.
+        </p>
+      </div>
+    </div>
+
+    <img src="image 114.png" alt="Йога студия" />
+
+    <div class="row details">
+      <div class="col">
+        <p>формат</p>
+        <div class="highlighted-text">очно</div>
+      </div>
+      <div class="col">
+        <p>город</p>
+        <div class="highlighted-text">Москва</div>
+      </div>
+      <div class="col">
+        <p>занятость</p>
+        <div class="highlighted-text">частичная</div>
+      </div>
+    </div>
+
+    <h2>обязанности</h2>
+    <p class="bold">1. Пунктуальность</p>
+    <p class="bold">2. Умение работать в команде</p>
+    <p class="bold">3. Уверенные навыки владения Photoshop, Figma</p>
+    
+    <!-- Переместите кнопку выше футера -->
+    <button class="apply-btn">Откликнуться</button>
+    <!-- Футер -->
+    <footer class="footer">
+      <img class="icon" src="/footer/Notifications None.png" alt="">
+      <img class="icon" src="/footer/Chat.png" alt="">
+      <img class="icon" src="/footer/Profile.png" alt="" onclick="window.location.href='../4.1/4.1.html'"></img>
+  </footer>
+    <script>
+      // Получаем элемент кнопки
+      const button = document.querySelector('.apply-btn');
+
+      // Добавляем обработчик события нажатия
+      button.addEventListener('click', function() {
+        this.classList.add('clicked'); // Меняем класс у кнопки
+        this.disabled = true; // Деактивируем кнопку, чтобы предотвратить повторные нажатия
+      });
+    </script>
+  </body>
+</html>
